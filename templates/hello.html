@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Spletna forenzična aplikacija</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <h1>Dobrodošli!</h1>
+    <p>Proism vnesite DNK kodo!</p>
+    <form method="POST" >
+        <textarea rows="6" cols="50" name="DNA-code" autofocus> 
+        </textarea>
+        <br / >
+        <input type = "submit" value ="Potrdi">
+    </form>
+    {% if criminal %}
+    <p>Criminal description:</p>
+    {% for attribute in criminal %}
+    {{attribute}}: {{criminal[attribute]}},
+    {% endfor %}
+    {% endif %}
+    
+</body>
+</html>
